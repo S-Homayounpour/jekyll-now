@@ -110,6 +110,7 @@ def cost_func(theta_s,X_ones_added,data):
 costs = cost_func(lin_coeffs[1],X_ones_added,data) 
 ```
 
+
 The following plot assert that the gradient descent method is working. In fact, the plot shows that the gradent descent is minimzing the cost function as it is itarating.  
 
 
