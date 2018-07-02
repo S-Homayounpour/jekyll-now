@@ -2,6 +2,7 @@
 
 ## Linear Regression (Part 1)
 
+
 In this report it is aimed to describe and construct a linear regression model by using gradient descent approach. Linear regression method is a statistical method for predicting a contnious variable. Given the observed data, the aim of a linear regression is to fit a linear function in terms of dependnet variables into data such that the average of distance of observed values and predicted values is minimized. In fact,it is aimed to minimize 
 $$J(\theta) = \frac{1}{2m}\sum_{i=1}^{m} (h_{\theta}(x^{(i)})-y^{(i)}))^{2}$$
 where $$J(\theta)$$ is the cost function (or average of square of distances) and $$h_{\theta}(x)$$ is the linear model or hypothesis (the linear function that it is aimed to fit). The linear function form is $$\theta^{T}x = \theta_{0}+\theta_{1}x_{1}$$. 
