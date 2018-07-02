@@ -89,7 +89,7 @@ print(lin_coeffs[0])
     [[-3.89459687  1.1929147 ]]
 
 
-As it can be seen $-3.89459687$ represents the intercept and $1.1929147$ is slope of the regression line. In order to evaluate that the model is working correctly a cost function is implementd to calculate the cost for all values of thetas (hypothesis coefficient). To assess that gradient descent is working properly it should investigated that by iterating the gradient descent the cost function is reducing.     
+As it can be seen $$-3.89459687$$ represents the intercept and $$1.1929147$$ is slope of the regression line. In order to evaluate that the model is working correctly a cost function is implementd to calculate the cost for all values of thetas (hypothesis coefficient). To assess that gradient descent is working properly it should investigated that by iterating the gradient descent the cost function is reducing.     
 
 
 ```python
@@ -130,9 +130,8 @@ ax.view_init(60, 15)
 As the plot shows by iterating for all values of thetas over cost function it can be seen that cost function is reducing and converging to its minimum value. In order to check that the obtained parameters are meaningful we can fit the regression line into the data. Before fitting the line into data it is worth to check that cost function minimum is close to obtained value. Thus we aim to plot the contour of cost function. If we expand the cost function of regression line with one dependent variable into serires form  then we have
 
 $$
-\begin{equation}
 \frac{1}{2}\theta_{0}^{2} + \frac{1}{2m}\theta_{1}^{2}\sum_{1}^{m}x_{i}^{2}+\frac{1}{m}\theta_{1}\theta_{0}\sum_{1}^{m}x_{i}-\frac{\theta_{0}}{m}\sum_{1}^{m}y_{i}-\frac{\theta_{1}}{m}\sum_{1}^{m} x_{i}y_{i}+\frac{1}{2m}\sum_{1}^{m}y_{i}^{2}
-\end{equation}
+
 $$ 
 
 and we can apply the above formula to calculate the cost function over a meshgird. The coeff_of_costfunc is the function that calculate the coefficients of the above formula. 
