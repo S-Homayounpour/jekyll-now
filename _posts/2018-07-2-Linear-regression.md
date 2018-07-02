@@ -1,13 +1,9 @@
 
----
-layout: post
-title: Linear Regression
----
 
 ## Linear Regression (Part 1)
 
 In this report it is aimed to describe and construct a linear regression model by using gradient descent approach. Linear regression method is a statistical method for predicting a contnious variable. Given the observed data, the aim of a linear regression is to fit a linear function in terms of dependnet variables into data such that the average of distance of observed values and predicted values is minimized. In fact,it is aimed to minimize 
-$$J(\theta) = \frac{1}{2m}\sum_{i=1}^{m} (h_{\theta}(x^{(i)})-y^{(i)}))^{2}$$
+$J(\theta) = \frac{1}{2m}\sum_{i=1}^{m} (h_{\theta}(x^{(i)})-y^{(i)}))^{2}$
 where $$J(\theta)$$ is the cost function (or average of square of distances) and $$h_{\theta}(x)$$ is the linear model or hypothesis (the linear function that it is aimed to fit). The linear function form is $$\theta^{T}x = \theta_{0}+\theta_{1}x_{1}$$. 
 
 Finding parametrs of linear function can be conducted in two manners of gradient descent and normal equation calculation. Linear regression can be constructed with respect to one variable or more although in this part I aim to fit a linear model with respect to one dependent variable using gradient descnet method. In gradient descent method in each iteration the parameters $$\theta_{i}$$ is upadated in the following manner where the $$\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)}))x_{j}^{(i)}$$ is the gradient of cost function with respect to the $$ith$$ dependent variable. So in each step of iteration we have 
