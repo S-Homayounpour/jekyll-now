@@ -1,5 +1,4 @@
 
-
 ## Linear Regression (Part 1)
 
 In this report it is aimed to describe and construct a linear regression model by using gradient descent approach. Linear regression method is a statistical method for predicting a contnious variable. Given the observed data, the aim of a linear regression is to fit a linear function in terms of dependnet variables into data such that the average of distance of observed values and predicted values is minimized. In fact,it is aimed to minimize 
