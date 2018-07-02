@@ -1,13 +1,10 @@
 
+
 ## Linear Regression (Part 1)
 
 In this report it is aimed to describe and construct a linear regression model by using gradient descent approach. Linear regression method is a statistical method for predicting a contnious variable. Given the observed data, the aim of a linear regression is to fit a linear function in terms of dependnet variables into data such that the average of distance of observed values and predicted values is minimized. In fact,it is aimed to minimize 
-
 $$J(\theta) = \frac{1}{2m}\sum_{i=1}^{m} (h_{\theta}(x^{(i)})-y^{(i)}))^{2}$$
-
-where $$J(\theta)$$ is the cost function (or average of square of distances) and $$h_{\theta}(x)$$ is the linear model or hypothesis (the linear function that it is aimed to fit). The linear function form is 
-
-$$\theta^{T}x = \theta_{0}+\theta_{1}x_{1}$$. 
+where $$J(\theta)$$ is the cost function (or average of square of distances) and $$h_{\theta}(x)$$ is the linear model or hypothesis (the linear function that it is aimed to fit). The linear function form is $$\theta^{T}x = \theta_{0}+\theta_{1}x_{1}$$. 
 
 Finding parametrs of linear function can be conducted in two manners of gradient descent and normal equation calculation. Linear regression can be constructed with respect to one variable or more although in this part I aim to fit a linear model with respect to one dependent variable using gradient descnet method. In gradient descent method in each iteration the parameters $$\theta_{i}$$ is upadated in the following manner where the $$\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)}))x_{j}^{(i)}$$ is the gradient of cost function with respect to the $$ith$$ dependent variable. So in each step of iteration we have 
 $$\theta_{j} := \theta_{j} - \alpha \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)}))x_{j}^{(i)}$$ where $$\alpha$$ is learning rate which is set by user.   
@@ -92,7 +89,7 @@ print(lin_coeffs[0])
     [[-3.89459687  1.1929147 ]]
 
 
-As it can be seen $$-3.89459687$$ represents the intercept and $$1.1929147$$ is slope of the regression line. In order to evaluate that the model is working correctly a cost function is implementd to calculate the cost for all values of thetas (hypothesis coefficient). To assess that gradient descent is working properly it should investigated that by iterating the gradient descent the cost function is reducing.     
+As it can be seen $-3.89459687$ represents the intercept and $1.1929147$ is slope of the regression line. In order to evaluate that the model is working correctly a cost function is implementd to calculate the cost for all values of thetas (hypothesis coefficient). To assess that gradient descent is working properly it should investigated that by iterating the gradient descent the cost function is reducing.     
 
 
 ```python
@@ -108,7 +105,6 @@ def cost_func(theta_s,X_ones_added,data):
 
 costs = cost_func(lin_coeffs[1],X_ones_added,data) 
 ```
-
 
 The following plot assert that the gradient descent method is working. In fact, the plot shows that the gradent descent is minimzing the cost function as it is itarating.  
 
@@ -132,7 +128,8 @@ ax.view_init(60, 15)
 
 
 As the plot shows by iterating for all values of thetas over cost function it can be seen that cost function is reducing and converging to its minimum value. In order to check that the obtained parameters are meaningful we can fit the regression line into the data. Before fitting the line into data it is worth to check that cost function minimum is close to obtained value. Thus we aim to plot the contour of cost function. If we expand the cost function of regression line with one dependent variable into serires form  then we have
-$$\frac{1}{2}\theta_{0}^{2} + \frac{1}{2m}\theta_{1}^{2}\sum_{1}^{m}x_{i}^{2}+\frac{1}{m}\theta_{1}\theta_{0}\sum_{1}^{m}x_{i}-\frac{\theta_{0}}{m}\sum_{1}^{m}y_{i}-\frac{\theta_{1}}{m}\sum_{1}^{m} x_{i}y_{i}+\frac{1}{2m}\sum_{1}^{m}y_{i}^{2}$$
+
+$\frac{1}{2}\theta_{0}^{2} + \frac{1}{2m}\theta_{1}^{2}\sum_{1}^{m}x_{i}^{2}+\frac{1}{m}\theta_{1}\theta_{0}\sum_{1}^{m}x_{i}-\frac{\theta_{0}}{m}\sum_{1}^{m}y_{i}-\frac{\theta_{1}}{m}\sum_{1}^{m} x_{i}y_{i}+\frac{1}{2m}\sum_{1}^{m}y_{i}^{2}$ 
 
 and we can apply the above formula to calculate the cost function over a meshgird. The coeff_of_costfunc is the function that calculate the coefficients of the above formula. 
 
